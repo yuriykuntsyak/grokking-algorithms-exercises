@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
-
 import logging
 import os
-import time
+
+from utils import get_exec_time
 
 logging.basicConfig(
     level=int(
@@ -18,11 +17,11 @@ def generate_ordered_array(array, len):
     for i in range(0,len):
         array.append(i)
 
-if __name__ == 'test_cases':
-    startTime = time.perf_counter()
-    
-    generate_ordered_array(ordered_int_array, MAX_LEN)
-
-    logging.debug(
-        f"test_cases: Generated array of {MAX_LEN} integers in {time.perf_counter() - startTime} seconds."
+if __name__ == 'test_cases':    
+    get_exec_time(
+        generate_ordered_array,
+        array=ordered_int_array,
+        len=MAX_LEN
     )
+
+    logging.debug(f"test_cases: Generated array of {MAX_LEN} integers.")
