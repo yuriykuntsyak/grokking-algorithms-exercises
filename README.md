@@ -5,3 +5,7 @@ Exercises from the book [Grokking Algorithms](https://www.manning.com/books/grok
 ```sh
 MAX_LEN=10000000 ITEM=123 LOGLEVEL=10 ./01_binary_search.py
 ```
+
+```sh
+MAX_LEN=10000 LOGLEVEL=10 ./02_selection_sort.py
+```
